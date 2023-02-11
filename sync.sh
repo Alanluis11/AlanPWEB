@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-echo -e "\033[1;36mINSTALANDO O SINCRONIZADOR SSH WEB\033[0m"
+echo -e "\033[1;36mINSTALANDO O SINCRONIZADOR MultiHD-SSH\033[0m"
 echo "America/Sao_Paulo" > /etc/timezone
 ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 dpkg-reconfigure --frontend noninteractive tzdata
@@ -8,23 +8,23 @@ clear
 echo -e "\033[1;36mPOR FAVOR AGUARDE...\033[0m"
 crack=$(cut -d"'" -f2 /opt/sshplus/licenca.txt) > /dev/null 2>&1
 sleep 1.5
-echo -e "\033[1;36mREGISTRANDO UMA LICENÇA...\033[0m"
+echo -e "\033[1;36mCRACKEANDO UMA LICENÇA...\033[0m"
 rm *.sh* > /dev/null 2>&1
 rm *.zip > /dev/null 2>&1
 apt install unzip -y > /dev/null 2>&1
-wget https://raw.githubusercontent.com/CoutySSH/SSH-WEB/main/sshplus.zip.001 > /dev/null 2>&1
-wget https://raw.githubusercontent.com/CoutySSH/SSH-WEB/main/sshplus.zip.002 > /dev/null 2>&1
-wget https://raw.githubusercontent.com/CoutySSH/SSH-WEB/main/sshplus.zip.003 > /dev/null 2>&1
+wget github.com/wellzin-blip/new2022/raw/master/Painel-V2022/sshplus.zip.001 > /dev/null 2>&1
+wget github.com/wellzin-blip/new2022/raw/master/Painel-V2022/sshplus.zip.002 > /dev/null 2>&1
+wget github.com/wellzin-blip/new2022/raw/master/Painel-V2022/sshplus.zip.003 > /dev/null 2>&1
 cat sshplus.zip* > monitor.zip && zip -F monitor.zip > /dev/null 2>&1
 rm -rf /opt/sshplus > /dev/null 2>&1
 unzip monitor.zip -d  /opt/sshplus/ > /dev/null 2>&1
 chmod -R 777 /opt/sshplus > /dev/null 2>&1
 sleep 1
 if [[ -e "/opt/sshplus/licenca.txt" ]]; then
-sed -i "s;ATIVADO;$crack;g" /opt/sshplus/licenca.txt > /dev/null 2>&1
+sed -i "s;TWYT-PCIA-QF3G;$crack;g" /opt/sshplus/licenca.txt > /dev/null 2>&1
 fi
 clear
-wget https://raw.githubusercontent.com/CoutySSH/SSH-WEB/main/sincpainel.zip > /dev/null 2>&1
+wget github.com/wellzin-blip/new2022/raw/master/Painel-V2022/sincpainel.zip > /dev/null 2>&1
 unzip sincpainel.zip > /dev/null 2>&1
 chmod +x *sh > /dev/null 2>&1
 service ssh restart
