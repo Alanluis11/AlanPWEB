@@ -2,7 +2,7 @@
 
 🔹️PAINELWEB AlanSSH Free!
       
-      feat: @scottssh
+🍷feat: @scottssh
 
 
 ⬇️ Instalador
